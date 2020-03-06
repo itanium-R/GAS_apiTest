@@ -19,3 +19,11 @@ function doGet(ev) {
           .setMimeType(ContentService.MimeType.JSON)
           .setContent(json);
 }
+
+function doPost(e){
+  try{
+    console.log(e.postData.getDataAsString());
+  }catch(er){
+    console.log(er.message); throw er;
+  }
+}
