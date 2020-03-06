@@ -2,7 +2,6 @@ function accessApi(url) {
   return UrlFetchApp.fetch(url).getContentText();
 }
 
-// ページにアクセスされたときに実行
 function doGet(ev) {  
   const getJson = (ev) => {
     try{
@@ -14,6 +13,7 @@ function doGet(ev) {
   };
 
   const json = getJson(ev);
+  console.log(json);
 
   return ContentService.createTextOutput()
           .setMimeType(ContentService.MimeType.JSON)
