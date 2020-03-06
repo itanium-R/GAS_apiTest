@@ -17,5 +17,5 @@ function doGet(ev) {
 
   return ContentService.createTextOutput()
           .setMimeType(ContentService.MimeType.JSON)
-          .setContent(JSON.stringify(json));
+          .setContent(json);
 }
